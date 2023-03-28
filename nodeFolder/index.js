@@ -34,8 +34,9 @@ const friendsData = {
 
 const server = http.createServer((req, res)=>{
     const headers = {
-        "Access-Control-Allow-Origin":"*",
-        "Access-Control-Allow-Methods": "GET"
+        'Access-Control-Allow-Origin': "*",
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Max-Age": 2592000,
     }
 
     if(req.url === "/friendsData" && req.method === "GET"){
