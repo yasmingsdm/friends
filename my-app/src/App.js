@@ -5,7 +5,7 @@ import useFetch from './useFetch';
 import './App.css';
 
 function App() {
-const url= 'http://localhost:3001/friendsData'
+const url= '/friendsData'
 const anotherApi = 'https://jsonplaceholder.typicode.com/comments'
   const {data, loading, error} = useFetch(url)
 
