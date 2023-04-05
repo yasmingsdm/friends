@@ -43,7 +43,7 @@ const server = http.createServer((req, res)=>{
         res.writeHead(200, headers, {"Content-Type": "application/json"}, res.end(JSON.stringify(friendsData)))
     }
 })
-server.route("/friendsData");
+
 server.listen(port, ()=>{
     console.log (`Check out the server at http://localhost:${port}`)
 })
