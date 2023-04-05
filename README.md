@@ -13,5 +13,5 @@ This project is just to see the name and picture of the main characteres of the 
 - http methods (Node).
 
 
-You can check the website [here](https://friends-frontend.vercel.app/)
+You can check the website [here](https://friends-frontend.vercel.app/). 
 You can check the API created [here](https://friends-backend.vercel.app/friendsData)
