@@ -4,6 +4,11 @@ The goal of this project was to practice the use of Node.js to create a full-sta
 
 This project is just to see the name and picture of the main characteres of the TV-series Friends.
 
+
+- You can check the website [here](https://friends-frontend.vercel.app/)
+- You can check the API created [here](https://friends-backend.vercel.app/friendsData)
+
+
 ### What I've practice /learned:
 - create my own hook (React),
 - useState (React),
@@ -13,5 +18,3 @@ This project is just to see the name and picture of the main characteres of the 
 - http methods (Node).
 
 
-- You can check the website [here](https://friends-frontend.vercel.app/)
-- You can check the API created [here](https://friends-backend.vercel.app/friendsData)
