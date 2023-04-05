@@ -32,18 +32,33 @@ const friendsData = {
     ]
 }
 
-const server = http.createServer((req, res)=>{
+const server = http.createServer((req, res) => {
     const headers = {
-        'Access-Control-Allow-Origin': "*",
-        "Access-Control-Allow-Methods": "GET",
-        "Access-Control-Max-Age": 2592000,
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET",
+      "Access-Control-Max-Age": 2592000,
+    };
+  
+    // Redirect to /friendsData when the root URL is requested
+    if (req.url === "/" && req.method === "GET") {
+      res.writeHead(302, { Location: "/friendsData" });
+      res.end();
+      return;
     }
-
-    if(req.url === "/friendsData" && req.method === "GET"){
-        res.writeHead(200, headers, {"Content-Type": "application/json"}, res.end(JSON.stringify(friendsData)))
+  
+    // Handle requests to /friendsData
+    if (req.url === "/friendsData" && req.method === "GET") {
+      res.writeHead(200, { ...headers, "Content-Type": "application/json" });
+      // Send the friendsData as a JSON string
+      res.end(JSON.stringify(friendsData));
+      return;
     }
-})
-
-server.listen(port, ()=>{
-    console.log (`Check out the server at http://localhost:${port}`)
-})
+  
+    // Return a 404 error for all other requests
+    res.writeHead(404);
+    res.end();
+  });
+  
+  server.listen(port, () => {
+    console.log(`Check out the server at http://localhost:${port}`);
+  });
