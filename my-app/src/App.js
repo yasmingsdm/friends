@@ -6,7 +6,7 @@ import './App.css';
 import Characters from "./Components/Characters";
 
 function App() {
-const url= '/friendsData'
+const url= 'https://friends-c7qz-3nb48uwi3-yasmingsdm.vercel.app/friendsData'
   const {data, loading, error} = useFetch(url)
 
   const {characters} = data
